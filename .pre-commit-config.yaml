@@ -1,0 +1,8 @@
+repos:
+- repo: local
+  hooks:
+  - id: prettier
+    name: prettier
+    entry: npm run format
+    language: system
+    pass_filenames: false

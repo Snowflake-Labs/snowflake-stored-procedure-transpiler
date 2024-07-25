@@ -1,0 +1,6 @@
+# Entry point for spt, the Snowflake Stored Procedure Transpiler.
+# Copyright 2024 Snowflake, Inc. All Rights Reserved.
+# License Apache-2.0
+# Authors Nate McNamara, Manvi Thakore, Noble Mushtak
+
+exec ts-node $(dirname "$0")/main.ts "$@"

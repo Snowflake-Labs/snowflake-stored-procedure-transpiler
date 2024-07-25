@@ -1,0 +1,58 @@
+{
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/chai": "^4.3.16",
+    "@types/deasync": "^0.1.5",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.10.4",
+    "@types/sinon": "^17.0.3",
+    "@types/snowflake-sdk": "^1.6.20",
+    "chai": "^4.4.1",
+    "mocha": "^10.2.0",
+    "nyc": "^17.0.0",
+    "prettier": "^3.1.1",
+    "rollup": "^4.18.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "sinon": "^18.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "deasync": "^0.1.30",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "simple-ascii-chart": "^4.0.6",
+    "snowflake-sdk": "^1.9.2"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4
+  },
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc mocha",
+    "build": "tsc",
+    "format": "prettier --write \"**/*.{ts,tsx}\""
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "check-coverage": true,
+    "all": false,
+    "exclude": [
+      "setup-snowflake.js"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "report-dir": "coverage"
+  }
+}
