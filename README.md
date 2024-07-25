@@ -1,6 +1,6 @@
-# spt
+# Stored Procedure Transpiler
 
-`spt` is Snowflake's Stored Procedure Transpiler. It enables developers to
+Stored Procedure Transpiler (`spt`) is Snowflake's Stored Procedure Transpiler. It enables developers to
 write Snowflake stored procedures in pure TypeScript. In addition to providing
 type annotation checks, the entire TypeScript and JavaScript ecosystems are
 available, providing numerous benefits:
